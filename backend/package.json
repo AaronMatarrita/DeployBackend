@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon index.js --ignore client",
-    "start": "npm run dev",
+    "start": "node index.js",
     "build": "npm install --omit=dev"
   },
   "keywords": [],
