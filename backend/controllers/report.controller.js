@@ -256,7 +256,7 @@ async function createReceiptPDF(currentDate, storeData, saleData) {
                 status: 200,
                 data: {
                     message: "PDF generado exitosamente",
-                    downloadLink: `http://localhost:4000/api/reports/download_pdf?file=Recibo/${fileName}`
+                    downloadLink: `https://deploybackend-production-e19f.up.railway.app/api/reports/download_pdf?file=Recibo/${fileName}`
                 }
             });
         });
@@ -428,7 +428,7 @@ async function createShoppingPDF(currentDate, storeData, shoppingData, MIN_FEC, 
                 status: 200,
                 data: {
                     message: "Informe de compras generado exitosamente",
-                    downloadLink: `http://localhost:4000/api/reports/download_report?file=Compras/${fileName}`
+                    downloadLink: `https://deploybackend-production-e19f.up.railway.app/api/reports/download_report?file=Compras/${fileName}`
                 }
             });
         });
@@ -576,7 +576,7 @@ async function createSalePDF(currentDate, storeData, salesData, MIN_FEC, MAX_FEC
                 status: 200,
                 data: {
                     message: "Informe de ventas por cliente generado exitosamente",
-                    downloadLink: `http://localhost:4000/api/reports/download_report?file=Ventas/${fileName}`
+                    downloadLink: `https://deploybackend-production-e19f.up.railway.app/api/reports/download_report?file=Ventas/${fileName}`
                 }
             });
         });
@@ -624,7 +624,7 @@ async function createShoppingEXCEL(currentDate, storeData, shoppingData, MIN_FEC
                 status: 200,
                 data: {
                     message: "Informe de compras generado exitosamente en Excel",
-                    downloadLink: `http://localhost:4000/api/reports/download_report?file=Compras/${fileName}`
+                    downloadLink: `https://deploybackend-production-e19f.up.railway.app/api/reports/download_report?file=Compras/${fileName}`
                 }
             });
 
@@ -673,7 +673,7 @@ async function createSaleEXCEL(currentDate, storeData, salesData, MIN_FEC, MAX_F
                 status: 200,
                 data: {
                     message: "Informe de ventas generado exitosamente en Excel",
-                    downloadLink: `http://localhost:4000/api/reports/download_report?file=Ventas/${fileName}`
+                    downloadLink: `https://deploybackend-production-e19f.up.railway.app/api/reports/download_report?file=Ventas/${fileName}`
                 }
             });
 
