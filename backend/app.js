@@ -58,11 +58,12 @@ app.use('/api/reports', reportRoutes)
 
 if (process.env.NODE_ENV === "production") {
   const path = await import("path");
-  app.use(express.static("client/dist"));
+  const __dirname = path.resolve();
+  
+  app.use(express.static(path.join(__dirname, "client", "dist")));
 
   app.get("*", (req, res) => {
-    console.log(path.resolve("client", "build", "index.html") );
-    res.sendFile(path.resolve("client", "build", "index.html"));
+    res.sendFile(path.join(__dirname, "client", "dist", "index.html"));
   });
 }
 
