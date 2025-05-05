@@ -1,27 +1,15 @@
 import app from "./app.js";
-import { PORT } from "./config.js";
-// import db from "./db.js";
+
+const PORT = process.env.PORT || 4000;
 
 async function main() {
   try {
-    // dbConecction();
-    app.listen(PORT);
-    console.log(`Listening on port http://localhost:${PORT}`);
-    // console.log(`Environment: ${process.env.NODE_ENV}`)
+    app.listen(PORT, () => {
+      console.log(`Listening on port http://localhost:${PORT}`);
+    });
   } catch (error) {
     console.error(error);
-
   } 
 }
-
-// async function dbConecction() {
-//   try {
-//     await db.authenticate();
-//     console.log("Database online");
-
-//   } catch (error) {
-//     throw new Error ( error );
-//   }
-// }
 
 main();
