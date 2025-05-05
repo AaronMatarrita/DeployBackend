@@ -163,7 +163,6 @@ export const getAllDataFromGrpahic = async (req, res) => {
     }
 }
 
-
 function validateDate(dateString) {
     const validFormat = /^\d{4}-\d{2}-\d{2}$/.test(dateString);
     if (!validFormat) {
