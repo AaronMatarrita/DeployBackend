@@ -140,7 +140,8 @@ export const searchProduct = async (req, res) => {
 //======================== Configuración de Multer ========================
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, '/uploads/images/products/'); // Directorio de carga
+        const __dirname = path.resolve();
+        cb(null, path.join(__dirname, 'uploads', 'images', 'products'));
     },
     filename: (req, file, cb) => {
         const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1e9);
